@@ -19,9 +19,8 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-import { TabsProps } from 'tdesign-vue-next';
+import type { TabsProps } from 'tdesign-vue-next';
 const value = ref<TabsProps['value']>('first');
-const placement = ref<TabsProps['placement']>('top');
 const video = ref("https://qcloudimg.tencent-cloud.cn/raw/4b83f25790283e2cf32c74f15f353a24.mp4")
 let tabs = ref([
     {

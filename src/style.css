@@ -122,6 +122,7 @@ textarea {
     font-size: 14px;
   }
 }
+
 body {
   line-height: 1.6;
   position: relative;
@@ -145,16 +146,20 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
+
 a:hover {
   text-decoration: underline;
   outline: none;
 }
+
 a.ie6:hover {
   zoom: 1;
 }
+
 a:focus {
   outline: none;
 }
+
 a:hover,
 a:active {
   outline: none;
@@ -286,26 +291,14 @@ input[type="search"]::-webkit-search-decoration {
 .clearfix {
   zoom: 1;
 }
-.flex{
-    display: flex;
+
+.flex {
+  display: flex;
 }
-#app{
-    background-color: #fff;
+
+#app {
+  background-color: #fff;
 }
-.list-header{
-    padding: 20px 0px;
-    background: #fff;
-    box-shadow: 3px 3px 12px rgba(55,99,170,.2)
-}
-.title-desc{
-    text-align: center;
-    margin-bottom: 20px;
-}
-.title {
-    text-align: center;
-    margin: 20px 0px;
-    font-weight: 500;
-    font-size: 28px;
-    color: #000;
-    line-height: 48px
+:root {
+  --td-bg-color-page: orange;
 }

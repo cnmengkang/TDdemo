@@ -1,12 +1,9 @@
 <template>
     <section class="list-wrapper">
-        <div class="list-header">
-            <h1 class="title">性能强大、安全、稳定的云产品</h1>
-            <p class="title-desc">腾讯多年技术沉淀，300+ 款产品共筑腾讯云产品矩阵</p>
-        </div>
+        <h-title title="性能强大、安全、稳定的云产品" desc="腾讯多年技术沉淀，300+ 款产品共筑腾讯云产品矩阵" linkText="查看全部产品" />
         <div class="index-list flex gap">
             <section class="left">
-                <div class="item" v-for="item in 2" :key="item.id">
+                <div class="item" v-for="(_,index) in 2" :key="index">
                     <h3 class="product-title">腾讯混元大模型</h3>
                     <p>自研大语言模型，强大逻辑推理能力</p>
                     <t-space class="tag-demo">
@@ -20,7 +17,7 @@
                 </div>
             </section>
             <section class="right">
-                <div class="list-item item" v-for="item in 12" :key="item.id">
+                <div class="list-item item" v-for="(_,index) in 12" :key="index">
                     <h4 class="right-title">腾讯混元大模型</h4>
                     <p>自研大语言模型，强大逻辑推理能力</p>
                     <t-space class="tag-demo">
@@ -34,13 +31,12 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue"
-
+import HTitle from "../title/index.vue"
 </script>
 
 <style scoped>
 .index-list {
-    max-width: 1360px;
+    justify-content: center;
     margin: 30px auto;
 }
 

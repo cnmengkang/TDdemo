@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue'
-import router from "./router"
+import router from "./route/index.ts"
 import TDesign from 'tdesign-vue-next';
 import 'tdesign-vue-next/es/style/index.css';
 import i18n from './languages/index.ts';

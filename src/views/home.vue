@@ -1,13 +1,12 @@
 <template>
-    <banner/>
-    <list/>
-    <ChartsTest/>
-    <timeDown/>
+    <com-banner />
+    <com-list />
+    <com-charts />
+    <com-time-down />
 </template>
-<script setup>
-import banner from "../components/banner/index.vue";
-import ChartsTest from "../components/ChartsTest/index.vue"
-import list from "../components/list/index.vue"
-import timeDown from "../components/down.vue"
-
+<script setup lang="ts">
+import ComBanner from '@/components/banner/index.vue'
+import ComCharts from "@/components/echarts/index.vue"
+import ComList from "@/components/list/index.vue"
+import ComTimeDown from "@/components/down.vue"
 </script>

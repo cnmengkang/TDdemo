@@ -1,7 +1,7 @@
 <template>
     <div class="nav-container flex">
-        <t-head-menu>
-            <template #logo><img
+        <t-head-menu @change="handleClick">
+            <template #logo><img @click="router.push('/')"
                     src="https://cloudcache.tencent-cloud.com/qcloud/portal/kit/images/slice/logo.23996906.svg"
                     width="78" />
             </template>
@@ -30,9 +30,9 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue';
+import { computed } from 'vue';
 import { useRouter } from "vue-router";
-const router: any = useRouter();
+let router: any = useRouter();
 import { useI18n } from "vue-i18n";
 const { locale } = useI18n();
 const { t } = useI18n();
@@ -74,7 +74,9 @@ let navBar = computed(() => [
         id: 9,
     },
 ])
-const handleClick = () => {
+let handleClick = (path: any) => {
+    console.log("ddd", path)
+    if (path != 9) return
     router.push("/about");
 }
 
@@ -82,16 +84,18 @@ let languagesOptions = computed(() => [
     {
         label: t("language.Chinese"),
         value: "zh",
+        id: 0,
     },
     {
         label: t("language.English"),
         value: "en",
+        id: 1,
     },
 ])
 
 const currentLanguage = computed(() => {
-    let language =  locale.value || localStorage.getItem("lang") || "zh";
-    return language=="zh"?"中文":"English"
+    let language = locale.value || localStorage.getItem("lang") || "zh";
+    return language == "zh" ? "中文" : "English"
 });
 
 
