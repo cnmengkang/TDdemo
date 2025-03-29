@@ -16,7 +16,7 @@ onMounted(() => {
     let option = {
         tooltip: {
             trigger: 'item',
-            formatter: (params) => {
+            formatter: (params:any) => {
                 if (params.data && params.data.info) {
                     return `<strong>${params.name}</strong><br/>${params.data.info}`;
                 }
@@ -61,7 +61,7 @@ onMounted(() => {
                     normal: {
                         show: true,
                         position: 'top',
-                        formatter: (params) => {
+                        formatter: (params:any) => {
                             return params.data.name;
                         },
                         textStyle: {

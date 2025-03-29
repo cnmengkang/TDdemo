@@ -1,7 +1,7 @@
 <template>
     <section class="h-title">
         <h3 class="h-h3">{{ props.title }}</h3>
-        <div class="h-desc flex">
+        <div class="h-desc flex" v-if="props.desc">
             <p class="h-p-desc">{{ props.desc }}</p>
             <a class="h-a-link" :href="props.url">{{ props.linkText }} ></a>
         </div>

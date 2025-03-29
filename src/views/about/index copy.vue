@@ -5,7 +5,7 @@
 
 <script setup lang="ts">
 import HTitle from "@/components/title/index.vue";
-import { ref, onMounted } from "vue";
+import {onMounted } from "vue";
 import worldGeoJSON from "@/map/world.json"
 import * as echarts from "echarts";
 import "echarts-gl";
