@@ -1,32 +1,35 @@
 <template>
-    <div class="nav-container flex">
-        <t-head-menu @change="handleClick">
-            <template #logo><img @click="router.push('/')"
-                    src="https://cloudcache.tencent-cloud.com/qcloud/portal/kit/images/slice/logo.23996906.svg"
-                    width="78" />
-            </template>
-            <t-menu-item v-for="item in navBar" :value="item.id" :key="item.id"><span>{{ item.name
-            }}</span></t-menu-item>
-        </t-head-menu>
-        <t-head-menu class="right" default-value="2-1" expand-type="popup" @change="handleSelect">
-            <t-input style="padding:0px 20px" auto-width size="large" :placeholder="t('searchPlaceholder')" clearable>
-                <template #suffixIcon>
-                    <search-icon :style="{ cursor: 'pointer' }" />
+    <t-affix ref="affix" :offset-top="0" :offset-bottom="60">
+        <div class="nav-container flex">
+            <t-head-menu @change="handleClick">
+                <template #logo><img @click="router.push('/')"
+                        src="https://cloudcache.tencent-cloud.com/qcloud/portal/kit/images/slice/logo.23996906.svg"
+                        width="78" />
                 </template>
-            </t-input>
-            <t-submenu :value="currentLanguage">
-                <template #title>
-                    <span>{{ currentLanguage }}</span>
-                </template>
-                <t-menu-item :value="item.value" v-for="item in languagesOptions" :key="item.id">{{ item.label
-                    }}</t-menu-item>
-            </t-submenu>
-            <t-menu-item value="10"><span>{{ t("navBar.menu11") }}</span></t-menu-item>
-            <t-menu-item value="11"><span>{{ t("navBar.menu12") }}</span></t-menu-item>
-            <t-menu-item value="13"><span>{{ t("navBar.menu14") }}</span></t-menu-item>
-            <t-menu-item value="14"><span>{{ t("navBar.menu15") }}</span></t-menu-item>
-        </t-head-menu>
-    </div>
+                <t-menu-item v-for="item in navBar" :value="item.id" :key="item.id"><span>{{ item.name
+                        }}</span></t-menu-item>
+            </t-head-menu>
+            <t-head-menu class="right" default-value="2-1" expand-type="popup" @change="handleSelect">
+                <t-input style="padding:0px 20px;" auto-width size="large" :placeholder="t('searchPlaceholder')"
+                    clearable>
+                    <template #suffixIcon>
+                        <search-icon :style="{ cursor: 'pointer' }" />
+                    </template>
+                </t-input>
+                <t-submenu :value="currentLanguage">
+                    <template #title>
+                        <span>{{ currentLanguage }}</span>
+                    </template>
+                    <t-menu-item :value="item.value" v-for="item in languagesOptions" :key="item.id">{{ item.label
+                        }}</t-menu-item>
+                </t-submenu>
+                <t-menu-item value="10"><span>{{ t("navBar.menu11") }}</span></t-menu-item>
+                <t-menu-item value="11"><span>{{ t("navBar.menu12") }}</span></t-menu-item>
+                <t-menu-item value="13"><span>{{ t("navBar.menu14") }}</span></t-menu-item>
+                <t-menu-item value="14"><span>{{ t("navBar.menu15") }}</span></t-menu-item>
+            </t-head-menu>
+        </div>
+    </t-affix>
 </template>
 
 <script setup lang="ts">
@@ -108,6 +111,9 @@ const handleSelect = (value: string) => {
 
 </script>
 <style scoped>
+.nav-container{
+    border-bottom: 1px solid #ccc;
+}
 :deep(.right .t-menu) {
     justify-content: flex-end;
 }

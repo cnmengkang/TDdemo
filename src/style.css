@@ -299,6 +299,14 @@ input[type="search"]::-webkit-search-decoration {
 #app {
   background-color: #fff;
 }
-:root {
-  --td-bg-color-page: orange;
+.h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    cursor: pointer;
+    line-height: 28px;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
 }

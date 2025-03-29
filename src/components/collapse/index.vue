@@ -73,7 +73,6 @@ const handleMouseEnter = (index) => {
     .flex {
         .collapse-li {
             width: 15%;
-            position: relative;
             overflow: hidden;
             border: 2px solid #fff;
             border-radius: 5px;
@@ -129,18 +128,6 @@ const handleMouseEnter = (index) => {
 
 :deep(.t-card__body) {
     padding: 12px;
-}
-
-.h3 {
-    font-size: 18px;
-    font-weight: 500;
-    margin-bottom: 15px;
-    cursor: pointer;
-    line-height: 28px;
-}
-
-.mb-10 {
-    margin-bottom: 10px;
 }
 
 .header-h3 {

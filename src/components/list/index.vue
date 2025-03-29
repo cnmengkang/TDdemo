@@ -100,11 +100,11 @@ import HTitle from "../title/index.vue"
     border-bottom: 1px solid #ccc;
     border-right: 1px solid #ccc;
     cursor: pointer;
-    transition: box-shadow .3s ease-in-out;
+    transition: box-shadow .3s ease-in-out
 }
 
 .list-item.item:hover {
-    box-shadow: 3px 3px 12px rgba(55,99,170,.2)
+    box-shadow: 3px 3px 12px rgba(55,99,170,.2);
 }
 
 .list-item:nth-child(4n) {
